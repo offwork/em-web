@@ -17,5 +17,6 @@ first install it as pnpm global package
 - pnpm add --global nx
 
 for the application
+- pnpm i
 - nx run api:serve
 - nx run employee-management:serve
