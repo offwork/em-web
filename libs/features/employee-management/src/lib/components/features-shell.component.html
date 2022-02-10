@@ -1,0 +1,59 @@
+<em-web-layout-shell (expanded)="setState($event)">
+  <em-web-layout-header-tpl>
+    <ng-template let-toggleMenu="toggleMenu">
+      <em-web-layout-header
+        [logo]="logo"
+        [title]="title"
+        [color]="color"
+        [tooltip]="tooltip"
+        [redirectUrl]="redirectUrl"
+        [hideSidenavMenu]="hideMenu"
+        (menuClicked)="toggleMenu($event)">
+        <div class="">
+          <mat-menu #langMenu="matMenu">
+            <button mat-menu-item (click)="changeLanguage('tr')">Turkish</button>
+            <button mat-menu-item (click)="changeLanguage('en')">English</button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="langMenu" aria-label="change language">
+            <mat-icon>language</mat-icon>
+          </button>
+        </div>
+
+        <mat-divider [vertical]="true"></mat-divider>
+
+        <div mat-button class="user-profile" type="button">
+          <img width="48" height="48" src={{profilePhoto}}/>
+          <p>
+            <span class="mat-small">Sayın</span><br> <span>Kerem Ozdemir</span> <br> 
+          </p>
+          <mat-icon>more_vert</mat-icon>
+        </div>
+      </em-web-layout-header>
+    </ng-template>
+  </em-web-layout-header-tpl>
+  <em-web-layout-sidenav-tpl>
+    <ng-template let-toggleMenu="toggleMenu">
+      <mat-nav-list role="navigation">
+        <mat-list-item (click)="clickNavigate('list')">
+            <a matLine>Employee List</a>
+            <button mat-icon-button>
+              <mat-icon>list_alt</mat-icon>
+            </button>
+        </mat-list-item>
+        <mat-list-item (click)="clickNavigate('form')">
+            <a matLine>Employee Form</a>
+            <button mat-icon-button>
+              <mat-icon>post_add</mat-icon>
+            </button>
+        </mat-list-item>
+      </mat-nav-list>        
+    </ng-template>
+  </em-web-layout-sidenav-tpl>
+  <em-web-layout-container-tpl>
+    <ng-template>
+      <em-web-layout-container>
+        <router-outlet></router-outlet>
+      </em-web-layout-container>
+    </ng-template>
+  </em-web-layout-container-tpl>
+</em-web-layout-shell>

@@ -14,9 +14,17 @@
         "polyfills": "apps/employee-management/src/polyfills.ts",
         "tsConfig": "apps/employee-management/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/styles/src"]
+        },
         "assets": [
           "apps/employee-management/src/favicon.ico",
-          "apps/employee-management/src/assets"
+          "apps/employee-management/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets",
+            "output": "/assets"
+          }
         ],
         "styles": ["apps/employee-management/src/styles.scss"],
         "scripts": []

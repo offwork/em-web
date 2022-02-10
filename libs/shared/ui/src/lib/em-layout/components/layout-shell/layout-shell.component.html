@@ -1,0 +1,9 @@
+<div class="layout-shell">
+  <ng-container *ngTemplateOutlet="layoutHeaderTemplate; context: templateContext;"></ng-container>
+  <em-web-layout-sidenav [expanded]="expandedSinenav">
+    <ng-container ngProjectAs="[em-navs]" *ngTemplateOutlet="layoutSidenavTemplate; context: templateContext;"></ng-container>
+    <ng-container ngProjectAs="[em-feature]" *ngTemplateOutlet="layoutContainerTemplate; context: templateContext;"></ng-container>
+  </em-web-layout-sidenav>
+
+  <ng-template #emptyTemplate></ng-template>
+</div>

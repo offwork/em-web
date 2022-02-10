@@ -1,0 +1,24 @@
+<ng-container *ngIf="(employees$ | async) as employees">
+  <mat-card>
+    <mat-list>
+      <mat-list-item *ngFor="let employee of employees">
+        <img matListAvatar [src]="employee.thumb" [alt]="">
+        <h3 class="top-line" matLine>
+          {{employee.first_name}} {{employee.last_name}} – 
+          <span [style.font-weight]="'100'"> <i>{{employee.office}}</i> </span> 
+        </h3>
+        <span class="chip-list-container" matLine>
+          <mat-chip-list aria-label="Color selection">
+            <mat-chip *ngFor="let chip of employee.tags">
+              {{chip}}
+            </mat-chip>
+          </mat-chip-list>          
+        </span>
+        <button mat-icon-button (click)="clickOnEdit(employee)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <mat-divider [inset]="true"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</ng-container>

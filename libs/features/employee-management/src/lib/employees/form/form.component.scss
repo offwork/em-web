@@ -1,0 +1,24 @@
+.form-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 32px;
+
+  .form-group {
+    display: grid;
+    grid-gap: inherit;
+    grid-template-rows: 1fr 1fr;
+
+    .form-column {
+      display: flex;
+      gap: 16px;
+
+      .mat-form-field {
+        flex: 1;
+      }
+
+      .mat-raised-button {
+        flex: 1;
+      }
+    }
+  }
+}

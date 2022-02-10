@@ -1,0 +1,23 @@
+<div class="layout-header">
+
+  <button
+    mat-icon-button
+    (click)="toggleMenu()">
+    <mat-icon 
+      class="mat-icon material-icon"
+      role="img"
+      aria-hidden="true">menu_open</mat-icon>
+  </button>
+
+  <a
+    class="layout-header-logo-container"
+    [routerLink]="redirectUrl"
+    title="{{ tooltip }}">
+    <img src="{{ logo }}" class="layout-header-logo" />
+  </a>
+
+  <h2>{{ title }}</h2>
+
+  <ng-content></ng-content>
+
+</div>

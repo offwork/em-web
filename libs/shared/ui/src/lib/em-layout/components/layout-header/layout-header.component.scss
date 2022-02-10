@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .layout-header {
+    @apply flex h-16 py-2 px-4 shadow;
+  }
+}
+
+.layout-header {
+  align-items: center;
+  position: relative;
+
+  h2 {
+    color: #4c91c8;
+    margin: 0 auto;
+  }
+
+  .layout-header-logo-container {
+    margin-left: 1rem;
+
+
+    .layout-header-logo {
+      height: 52px;
+      position: relative;
+      vertical-align: middle;
+    }
+  }
+
+  .mat-divider {
+    &.mat-divider-vertical {
+      height: 62px;
+      margin: 0 22px 0 16px;
+    }
+  }
+}

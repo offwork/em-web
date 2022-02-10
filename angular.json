@@ -4,6 +4,9 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "employee-management": "apps/employee-management",
-    "employee-management-e2e": "apps/employee-management-e2e"
+    "employee-management-e2e": "apps/employee-management-e2e",
+    "features-employee-management": "libs/features/employee-management",
+    "shared-styles": "libs/shared/styles",
+    "shared-ui": "libs/shared/ui"
   }
 }

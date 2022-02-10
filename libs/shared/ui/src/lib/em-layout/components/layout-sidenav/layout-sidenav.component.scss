@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .layout-sidenav {
+    @apply inline h-full border-r-2 w-16 shadow-md;
+  }
+
+  .layout-feature {
+    @apply bg-gray-50 h-full;
+  }
+}
+
+.layout-sidenav-container {
+  height: calc(100% - 4rem);
+
+  .layout-sidenav {
+    background-color: var(--tw-ring-offset-color);
+  }
+
+  .layout-feature {
+    margin-left: 64px;
+  }
+}

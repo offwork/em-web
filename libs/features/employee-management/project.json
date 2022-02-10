@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/features/employee-management",
+  "sourceRoot": "libs/features/employee-management/src",
+  "prefix": "em-web",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/features/employee-management"],
+      "options": {
+        "jestConfig": "libs/features/employee-management/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/features/employee-management/src/**/*.ts",
+          "libs/features/employee-management/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:employee-management", "type:feature"]
+}

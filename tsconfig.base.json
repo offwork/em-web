@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@em-web/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@em-web/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@em-web/features/employee-management": [
+        "libs/features/employee-management/src/index.ts"
+      ],
+      "@em-web/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

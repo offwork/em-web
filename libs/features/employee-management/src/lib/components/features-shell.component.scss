@@ -1,0 +1,17 @@
+.user-profile {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 216px;
+
+  img {
+    background-color: #d1e097;
+    border: solid 1px #009688;
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 0;
+  }
+}

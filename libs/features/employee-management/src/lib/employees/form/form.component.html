@@ -1,0 +1,54 @@
+<mat-card class="form-content">
+  <div>
+    <img [src]="photo" alt="">
+  </div>
+  <form class="form-group" [formGroup]="employeeFormGroup" (submit)="onSubmit()" novalidate>
+    <div class="form-column">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="first_name" placeholder="Your name...">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="last_name" placeholder="Your last name...">
+      </mat-form-field>
+    </div>
+    <div class="form-column">
+      <mat-form-field appearance="fill">
+        <mat-label>Offices</mat-label>
+        <mat-select formControlName="office">
+          <mat-option *ngFor="let item of offices$ | async" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Tags</mat-label>
+        <mat-select formControlName="tags" multiple>
+          <mat-option *ngFor="let item of tags$ | async" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-column">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput formControlName="birth_date" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>            
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="phone" placeholder="Phone number...">
+      </mat-form-field>
+    </div>
+    <div class="form-column">
+      <button type="reset" mat-raised-button color="warn">Reset</button>
+      <button 
+        type="submit" 
+        mat-raised-button color="primary" 
+        [disabled]="!(this.employeeFormGroup.dirty && this.employeeFormGroup.touched)">Send</button>
+    </div>
+  </form>
+</mat-card>

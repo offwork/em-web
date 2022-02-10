@@ -1,0 +1,8 @@
+<div class="layout-sidenav-container">
+  <div [@toggle]="toggleSidenav" class="layout-sidenav">
+    <ng-content select="[em-navs]"></ng-content>
+  </div>
+  <div class="layout-feature">
+    <ng-content select="[em-feature]"></ng-content>
+  </div>
+</div>
